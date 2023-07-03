@@ -1,11 +1,9 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormControl,
-  FormControlState,
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { contactData } from 'src/app/models/contact.model';
 
 @Component({
@@ -39,6 +37,7 @@ export class ContactComponent implements OnInit{
 
 
   public onSubmit(): void {
+    alert("Thank you for reaching out! I`ll get back to you as soon as I can.")
     this.contact = this.contactForm.value;
   }
 
