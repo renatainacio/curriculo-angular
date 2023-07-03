@@ -16,6 +16,7 @@ export class AppComponent {
 
   public data: AppData = {
     name: "Maria da Silva",
+    photo: "assets/images/avatar.jpg",
     section:[
     {
       sectionTitle: "Work Experience",
@@ -110,6 +111,13 @@ export class AppComponent {
         skillName: "German",
         skillLevel: "Intermediate"
       }
-    ]
+    ],
+    socialMedia: {
+      facebookLink: "https://facebook.com/",
+      instagramLink: "https://instagram.com/",
+      pinterestLink: "https://pinterest.com/",
+      twitterLink: "https://twitter.com/",
+      linkedinLink: "https://linkedin.com/"
+    }
   }
 }

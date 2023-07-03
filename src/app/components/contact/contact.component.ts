@@ -39,6 +39,7 @@ export class ContactComponent implements OnInit{
   public onSubmit(): void {
     alert("Thank you for reaching out! I`ll get back to you as soon as I can.")
     this.contact = this.contactForm.value;
+    console.log(this.contact);
   }
 
 }

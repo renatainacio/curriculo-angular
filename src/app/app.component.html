@@ -6,7 +6,7 @@
   <div class="row-padding">
   
     <!-- Left Column -->
-    <app-sidebar [name]="data.name" [personalInformation]="data.personalInformation" [skills]="data.skills" [languages]="data.languages"></app-sidebar>
+    <app-sidebar [name]="data.name" [photo]="data.photo" [personalInformation]="data.personalInformation" [skills]="data.skills" [languages]="data.languages"></app-sidebar>
     <!-- Right Column -->
     <div class="twothird">
       <app-section [sectionTitle]="data.section[0].sectionTitle" [items]="data.section[0].items"></app-section>
@@ -18,5 +18,5 @@
   </div>
   <app-contact></app-contact>
 
-  <app-footer></app-footer>
+  <app-footer [socialMedia]="data.socialMedia"></app-footer>
 </div>

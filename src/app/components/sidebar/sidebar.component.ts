@@ -9,6 +9,7 @@ import { SkillData } from 'src/app/models/skill.model';
 })
 export class SidebarComponent {
   @Input() public name!: string;
+  @Input() public photo!: string;
   @Input() public personalInformation!: personalInformationData
   @Input() public skills!: SkillData[]
   @Input() public languages!: SkillData[]
