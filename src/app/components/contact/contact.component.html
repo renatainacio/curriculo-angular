@@ -9,13 +9,16 @@
                         <mat-form-field appearance="outline" >
                             <mat-label>Email</mat-label>
                             <input matInput formControlName="email">
+                            <mat-error>Please insert a valid email.</mat-error>
                           </mat-form-field>
                           <mat-form-field appearance="outline">
                             <mat-label>Subject</mat-label>
                             <input matInput formControlName="subject">
+                            <mat-error>Subject field cannot be empty.</mat-error>
                           </mat-form-field>
                           <mat-form-field appearance="outline">
                             <mat-label>Message</mat-label>
+                            <mat-error>Message field cannot be empty.</mat-error>
                             <textarea matInput formControlName="message"></textarea>
                           </mat-form-field>
                     </div>
