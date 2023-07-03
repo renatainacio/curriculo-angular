@@ -1,0 +1,16 @@
+.display-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container h2{
+    margin-top: 10px;
+}
+
+li{
+    list-style: none;
+    margin-top: 20px;
+    font-size: 13px;
+}

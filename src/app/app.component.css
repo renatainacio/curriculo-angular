@@ -1,0 +1,21 @@
+body{
+    background-color: #CCCCCC;
+
+}
+
+
+.row-padding{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+app-sidebar{
+    padding: 15px 15px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.twothird {
+    padding: 20px 20px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);   
+}

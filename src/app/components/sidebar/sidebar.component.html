@@ -1,0 +1,30 @@
+<div class="third">
+    
+    <div>
+      <div class="display-container">
+        <img src="assets/images/avatar.jpg" alt="Avatar">
+          <h2>{{name}}</h2>
+      </div>
+      <div>
+        <p><i class="fa fa-briefcase fa-fw"></i>{{personalInformation.profession}}</p>
+        <p><i class="fa fa-home fa-fw"></i>{{personalInformation.location}}</p>
+        <p><i class="fa fa-envelope fa-fw"></i>{{personalInformation.emailAddress}}</p>
+        <p><i class="fa fa-phone fa-fw"></i>{{personalInformation.phoneNumber}}</p>
+        <hr>
+
+        <p><b><i class="fa fa-asterisk fa-fw"></i>Skills</b></p>
+        <li *ngFor="let skill of skills">
+          {{skill.skillName}} - {{skill.skillLevel}}
+        </li>
+        <br>
+
+        <p><b><i class="fa fa-globe fa-fw"></i>Languages</b></p>
+        <li *ngFor="let language of languages">
+          {{language.skillName}} - {{language.skillLevel}}
+        </li>
+        <br>
+      </div>
+    </div><br>
+
+  <!-- End Left Column -->
+  </div>
