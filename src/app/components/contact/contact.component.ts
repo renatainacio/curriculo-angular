@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import {
+  FormControl,
+  FormControlState,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { contactData } from 'src/app/models/contact.model';
 
 @Component({
@@ -7,26 +14,32 @@ import { contactData } from 'src/app/models/contact.model';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit{
-  @Output() public sendContact = new EventEmitter<contactData>(); 
+  public contact?: contactData;
+  public contactForm!: FormGroup;
 
-  public contact!:contactData;
+
+  public buildForm(): void{
+    this.contactForm = new FormGroup({
+      email: new FormControl(null, [
+        Validators.required,
+        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+      ]),
+      subject: new FormControl(null, [
+        Validators.required,
+      ]),
+      message: new FormControl(null, [
+        Validators.required
+      ]),
+    });
+  }
 
   ngOnInit(): void {
-    this.contact = {
-      email: "",
-      subject: "",
-      message: ""
-    }
+    this.buildForm();
   }
 
-  public submitForm(): void{
-    if(this.contact.email && this.contact.message && this.contact.subject) {
-      this.sendContact.emit(this.contact)
-      alert("Thanks for reaching out! I'll get back to you soon.")
-    }
+
+  public onSubmit(): void {
+    this.contact = this.contactForm.value;
   }
 
-  public isFormValid(): boolean {
-    return !!this.contact.email && !!this.contact.message && !!this.contact.subject;
-  }
 }

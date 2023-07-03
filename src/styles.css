@@ -21,7 +21,7 @@ i {
 }
 
 img {
-    width: 70px;
+    width: 150px;
 }
 
 .form-button{
@@ -29,6 +29,7 @@ img {
     width: 200px;
     background-color: #00a86b !important;
     color: white !important;
+    margin-bottom: 20px;
 }
 
 .form-button:disabled{
