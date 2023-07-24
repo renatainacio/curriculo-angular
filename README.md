@@ -1,5 +1,5 @@
 # CV Generator
-Easily customized CVs
+Easily generate customized CVs
 
 
 # Overview
